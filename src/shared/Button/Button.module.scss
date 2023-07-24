@@ -1,0 +1,48 @@
+.button {
+  background-color: var(--primary-color);
+  border: none;
+  min-width: fit-content;
+  width: 100%;
+  border-radius: 20px;
+  font-family: "Work Sans";
+  font-weight: 600;
+  color: var(--text-color);;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__large {
+    @extend .button;
+
+    height: 72px;
+    font-size: 22px;
+  }
+
+  &__medium {
+    @extend .button;
+
+    height: 60px;
+  }
+
+  &__small {
+    @extend .button;
+
+    height: 46px;
+  }
+}
+
+.bordered {
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

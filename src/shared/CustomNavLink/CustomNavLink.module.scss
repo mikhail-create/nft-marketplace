@@ -1,0 +1,12 @@
+.link {
+  padding: 12px 20px;
+  color: var(--text-color);
+  font-family: 'Work Sans';
+  font-weight: 600;
+  text-align: center;
+
+  &:hover {
+    color: var(--primary-color);
+    transition: 500ms;
+  }
+}

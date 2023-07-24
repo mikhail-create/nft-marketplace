@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
-import cls from './MainLayout.module.scss'
-import { ThemeContext, themes } from 'shared/theme/ThemeContext';
-import ThemeToggle from 'shared/theme/ThemeToggle';
+import styles from './MainLayout.module.scss'
+import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
+import ThemeToggle from 'shared/Theme/ThemeToggle';
 import { ThemeContextType } from 'types/ThemeContextType';
+import Button from 'shared/Button/Button';
+import Header from 'components/Header/Header';
 
 function MainLayout() {
   // Получаем текущую тему и функцию переключения из контекста
@@ -17,19 +19,12 @@ function MainLayout() {
   };
 
   return (
-    <div className={cls.layout}>
-      <div>
-        MAIN
-      </div>
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <ThemeToggle
+    <div className={styles.layout}>
+      <Header />
+      {/* <ThemeToggle
         onChange={handleToggle}
         value={theme === themes.dark}
-      />
+      /> */}
     </div>
   )
 }
