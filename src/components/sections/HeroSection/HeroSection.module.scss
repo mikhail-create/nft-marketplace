@@ -48,4 +48,31 @@
       }
     }
   }
+
+  &_preview {
+    width: 510px;
+    height: 510px;
+    background-color: var(--bg-color--secondary);
+    border-radius: 20px;
+    font-family: 'Work Sans';
+
+    &__info {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      > span:first-child {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      > span {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        line-height: 140%;
+      }
+    }
+  }
 }
