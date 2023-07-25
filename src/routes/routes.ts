@@ -1,8 +1,16 @@
-const routes = [
+import React from "react";
+import HomePage from "./pages/HomePage";
+
+interface Route {
+  path: string;
+  component: React.ComponentType<any>;
+}
+
+const routes: Route[] = [
   {
     path: '/',
-    component: 'Home'
+    component: HomePage
   },
-]
+];
 
-export default routes
+export default routes;

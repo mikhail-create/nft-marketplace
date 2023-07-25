@@ -1,0 +1,51 @@
+.hero {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    width: 510px;
+    gap: 20px;
+    font-family: "Work Sans";
+
+    &__title {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    &__description {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+
+    &__button {
+      width: 224px;
+      margin: 10px 0;
+    }
+
+    &__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 0px;
+
+      span:nth-child(-n + 3) {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 140%;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160%;
+      }
+    }
+  }
+}

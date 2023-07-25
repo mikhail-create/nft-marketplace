@@ -12,9 +12,11 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  transition: 500ms;
 
   &:hover {
     cursor: pointer;
+    transform: scale(0.9);
   }
 
   &__large {
