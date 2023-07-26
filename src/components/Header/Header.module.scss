@@ -23,4 +23,48 @@
       width: 152px;
     }
   }
+
+  &_menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .header {
+    height: var(--header-tablet-size);
+    padding: 15px 50px;
+
+    &__logo {
+      gap: 9px;
+      width: 182px;
+    }
+
+    &_nav {
+      display: none;
+    }
+
+    &_menu {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .header {
+    height: var(--header-phone-size);
+    padding: 15px 30px;
+
+    &__logo {
+      gap: 9px;
+      width: 182px;
+    }
+
+    &_nav {
+      display: none;
+    }
+
+    &_menu {
+      display: block;
+    }
+  }
 }

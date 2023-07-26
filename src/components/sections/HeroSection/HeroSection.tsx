@@ -45,7 +45,9 @@ function HeroSection() {
         </div>
       </div>
       <div className={styles.hero_preview}>
-        <img srcSet={ImagePlaceholder} alt='Image Placeholder' />
+        <div className={styles.hero_preview__image}>
+          <img srcSet={ImagePlaceholder} alt='Image Placeholder' />
+        </div>
         <div className={styles.hero_preview__info}>
           <span>
             Space Walking
