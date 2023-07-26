@@ -11,7 +11,7 @@ const getTheme = () => {
   return themes.dark
 }
 
-export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = React.useState(getTheme)
 
   React.useEffect(() => {

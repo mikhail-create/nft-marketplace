@@ -1,0 +1,47 @@
+.section_label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Work Sans";
+
+  &__title {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 120%;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .section_label {
+    &__title {
+      font-size: 28px;
+      line-height: 140%;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .section_label {
+    &__title {
+      font-size: 28px;
+      line-height: 140%;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+}
