@@ -20,7 +20,7 @@ function HeroSection() {
             title='Get Started'
             size='Medium'
             isBordered={false}
-            icon={<Rocket fill="white" />}
+            icon={<Rocket fill='white' />}
           />
         </span>
         <div className={styles.hero_info__stats}>

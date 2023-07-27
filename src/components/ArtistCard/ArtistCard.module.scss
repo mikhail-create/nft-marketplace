@@ -9,6 +9,12 @@
   justify-content: center;
   gap: 20px;
   position: relative;
+  transition: 500ms;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.96);
+  }
 
   &__rank {
     position: absolute;

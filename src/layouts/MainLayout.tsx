@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styles from './MainLayout.module.scss'
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext111';
-import ThemeToggle from 'shared/Theme/ThemeToggle';
+import ThemeToggle from 'shared/Theme/ThemeToggle111';
 import { ThemeContextType } from 'types/ThemeContextType';
 import Button from 'shared/Button/Button';
 import Header from 'components/Header/Header';

@@ -12,7 +12,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.header__logo}>
         <Logo />
-        <LogoText fill="white" />
+        <LogoText fill='white' />
       </div>
       <nav className={styles.header_nav}>
         <CustomNavLink path='/' title='Marketplace' />
@@ -23,12 +23,12 @@ function Header() {
             size='Medium'
             title='Sign Up'
             isBordered={false}
-            icon={<User fill="white" />}
+            icon={<User fill='white' />}
           />
         </div>
       </nav>
       <span className={styles.header_menu}>
-        <BurgerMenu fill="white" />
+        <BurgerMenu fill='white' />
       </span>
     </header>
   )

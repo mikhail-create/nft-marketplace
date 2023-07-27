@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ThemeToggle.module.scss'
+import styles from './ThemeToggle111.module.scss'
 
 export interface Props {
   value: boolean,
@@ -7,10 +7,10 @@ export interface Props {
 }
 
 const ThemeToggle = ({ value, onChange }: Props) => (
-  <label className={styles.switch} htmlFor="toggler">
+  <label className={styles.switch} htmlFor='toggler'>
     <input
-      id="toggler"
-      type="checkbox"
+      id='toggler'
+      type='checkbox'
       onClick={onChange}
       checked={value}
       readOnly

@@ -16,7 +16,7 @@ function CreatorSection() {
             title='View Rankings'
             size='Medium'
             isBordered={true}
-            icon={<Rocket fill="white" />}
+            icon={<Rocket fill='white' />}
           />
         </div>
       </div>
@@ -57,7 +57,7 @@ function CreatorSection() {
           title='View Rankings'
           size='Medium'
           isBordered={true}
-          icon={<Rocket fill="white" />}
+          icon={<Rocket fill='white' />}
         />
       </div>
     </div>
