@@ -1,7 +1,8 @@
 import React from 'react'
-import styles from './CollectionCard.module.scss'
 import Avatar from 'assets/images/avatar-placeholder.webp'
 import { CollectionCardPropsType } from 'types/CollectionCardPropsType'
+
+import styles from './CollectionCard.module.scss'
 
 function CollectionCard({ images, amount, name, author }: CollectionCardPropsType) {
 

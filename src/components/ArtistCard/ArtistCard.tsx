@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from './ArtistCard.module.scss'
 import { ArtistCardPropsType } from 'types/ArtistCardPropsType'
+
+import styles from './ArtistCard.module.scss'
 
 function ArtistCard({ rank, image, name, balance }: ArtistCardPropsType) {
   return (

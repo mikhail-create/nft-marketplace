@@ -2,8 +2,9 @@ import React from 'react'
 import { ReactComponent as Rocket } from 'assets/icons/rocket.svg'
 import ImagePlaceholder from 'assets/images/image-placeholder.webp'
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
-import styles from './HeroSection.module.scss'
 import Button from 'shared/Button/Button'
+
+import styles from './HeroSection.module.scss'
 
 function HeroSection() {
   return (
@@ -46,7 +47,7 @@ function HeroSection() {
       </div>
       <div className={styles.hero_preview}>
         <div className={styles.hero_preview__image}>
-          <img srcSet={ImagePlaceholder} alt='Image Placeholder' />
+          <img srcSet={ImagePlaceholder} alt='Placeholder' />
         </div>
         <div className={styles.hero_preview__info}>
           <span>

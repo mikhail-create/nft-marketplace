@@ -1,10 +1,11 @@
 import React from 'react'
-import styles from './CreatorSection.module.scss'
 import { ReactComponent as Rocket } from 'assets/icons/rocket.svg'
 import Avatar from 'assets/images/avatar-placeholder-big.webp'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
 import Button from 'shared/Button/Button'
 import ArtistCard from 'components/ArtistCard/ArtistCard'
+
+import styles from './CreatorSection.module.scss'
 
 function CreatorSection() {
   return (

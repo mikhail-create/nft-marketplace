@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonPropsType } from 'types/ButtonPropsType';
+
 import styles from './Button.module.scss';
 
 function Button({ title, size, icon, isBordered }: ButtonPropsType) {

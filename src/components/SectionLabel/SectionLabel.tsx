@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from './SectionLabel.module.scss'
 import { SectionLabelPropsType } from 'types/SectionLabelPropsType'
+
+import styles from './SectionLabel.module.scss'
 
 function SectionLabel({ title, subtitle }: SectionLabelPropsType) {
   return (

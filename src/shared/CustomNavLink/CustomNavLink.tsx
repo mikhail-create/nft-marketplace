@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { CustomNavLinkPropsType } from 'types/CustomNavLinkPropsType'
+
 import styles from './CustomNavLink.module.scss'
 
 function CustomNavLink({ path, title }: CustomNavLinkPropsType) {

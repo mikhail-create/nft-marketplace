@@ -1,10 +1,11 @@
 import React from 'react'
-import styles from './TrendingSection.module.scss'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
 import CollectionCard from 'components/CollectionCard/CollectionCard'
 import IMG0 from 'assets/images/collection/animals-collection-0.webp'
 import IMG1 from 'assets/images/collection/animals-collection-1.webp'
 import IMG2 from 'assets/images/collection/animals-collection-2.webp'
+
+import styles from './TrendingSection.module.scss'
 
 function TrendingSection() {
   return (
