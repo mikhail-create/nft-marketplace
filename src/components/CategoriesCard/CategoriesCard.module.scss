@@ -3,6 +3,12 @@
   height: 316px;
   border-radius: 20px;
   background-color: var(--bg-color--secondary);
+  cursor: pointer;
+  transition: 500ms;
+
+  &:hover {
+    transform: scale(0.95);
+  }
 
   &_img {
     width: 240px;
@@ -26,8 +32,11 @@
     &__icon {
       position: absolute;
       z-index: 2;
-      width: 100px;
-      height: 100px;
+
+      > svg {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     > img {
@@ -55,8 +64,10 @@
       height: 142px;
 
       &__icon {
-        width: 80px;
-        height: 80px;
+        > svg {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
 
@@ -76,8 +87,10 @@
       height: 142px;
 
       &__icon {
-        width: 80px;
-        height: 80px;
+        > svg {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
 

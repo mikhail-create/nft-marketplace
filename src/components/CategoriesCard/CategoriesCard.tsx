@@ -1,21 +1,23 @@
 import React from 'react'
-import IMG from 'assets/images/collection-placeholder.webp'
-import { ReactComponent as PaintBrush } from 'assets/icons/categories/paint-brush.svg'
+import { CategoriesCardPropsType } from 'types/CategoriesCardPropsType'
+import { Link } from 'react-router-dom'
 
 import styles from './CategoriesCard.module.scss'
 
-function CategoriesCard() {
+function CategoriesCard({ icon, name, image, path }: CategoriesCardPropsType) {
   return (
-    <div className={styles.card}>
+    <Link to={path} className={styles.card}>
       <div className={styles.card_img}>
         <div className={styles.card_img__wrapper}></div>
-        <img srcSet={IMG} alt='Collection' />
-        <PaintBrush className={styles.card_img__icon} stroke='white' />
+        <img srcSet={image} alt='Collection' />
+        <div className={styles.card_img__icon}>
+          {icon}
+        </div>
       </div>
       <div className={styles.card__name}>
-        Art
+        {name}
       </div>
-    </div>
+    </Link>
   )
 }
 
