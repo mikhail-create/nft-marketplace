@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './ThemeToggle111.module.scss'
+import styles from './ThemeToggle.module.scss'
 
 export interface Props {
   value: boolean,

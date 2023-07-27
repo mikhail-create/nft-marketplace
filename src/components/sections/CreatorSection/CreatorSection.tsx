@@ -52,6 +52,36 @@ function CreatorSection() {
           name='Keepitreal'
           balance='34.53'
         />
+        <ArtistCard
+          rank={1}
+          image={Avatar}
+          name='Keepitreal'
+          balance='34.53'
+        />
+        <ArtistCard
+          rank={2}
+          image={Avatar}
+          name='Keepitreal'
+          balance='34.53'
+        />
+        <ArtistCard
+          rank={3}
+          image={Avatar}
+          name='Keepitreal'
+          balance='34.53'
+        />
+        <ArtistCard
+          rank={4}
+          image={Avatar}
+          name='Keepitreal'
+          balance='34.53'
+        />
+        <ArtistCard
+          rank={5}
+          image={Avatar}
+          name='Keepitreal'
+          balance='34.53'
+        />
       </div>
       <div className={styles.creators__button}>
         <Button

@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from 'react'
 
-import { ThemeContext, themes } from './ThemeContext111'
+import { ThemeContext, themes } from './ThemeContext'
 
 const getTheme = () => {
   const theme = `${window?.localStorage?.getItem('theme')}`

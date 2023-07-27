@@ -1,0 +1,31 @@
+.categories {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &_list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .categories {
+    padding: 40px 72px;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .categories {
+    padding: 40px 30px;
+    gap: 40px;
+
+    &_list {
+      gap: 15px;
+    }
+  }
+}

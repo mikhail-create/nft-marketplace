@@ -9,9 +9,12 @@ function SectionLabel({ title, subtitle }: SectionLabelPropsType) {
       <span className={styles.section_label__title}>
         {title}
       </span>
-      <span className={styles.section_label__subtitle}>
-        {subtitle}
-      </span>
+      {
+        subtitle &&
+        <span className={styles.section_label__subtitle}>
+          {subtitle}
+        </span>
+      }
     </div>
   )
 }

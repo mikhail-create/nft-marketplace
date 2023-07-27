@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ThemeContext, themes } from 'shared/Theme/ThemeContext111';
-import ThemeToggle from 'shared/Theme/ThemeToggle111';
+import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
+import ThemeToggle from 'shared/Theme/ThemeToggle';
 import { ThemeContextType } from 'types/ThemeContextType';
 import Button from 'shared/Button/Button';
 import Header from 'components/Header/Header';

@@ -1,4 +1,4 @@
 export interface SectionLabelPropsType {
   title: string,
-  subtitle: string
+  subtitle?: string
 }

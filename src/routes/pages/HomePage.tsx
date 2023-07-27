@@ -1,7 +1,8 @@
+import React from 'react'
+import CategoriesSection from 'components/sections/CategoriesSection/CategoriesSection'
 import CreatorSection from 'components/sections/CreatorSection/CreatorSection'
 import HeroSection from 'components/sections/HeroSection/HeroSection'
 import TrendingSection from 'components/sections/TrendingSection/TrendingSection'
-import React from 'react'
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
       <HeroSection />
       <TrendingSection />
       <CreatorSection />
+      <CategoriesSection />
     </div>
   )
 }

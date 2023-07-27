@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'styles/index.scss'
-import ThemeProvider from 'shared/Theme/temp';
+import ThemeProvider from 'shared/Theme/ThemeProvider';
 
 import reportWebVitals from './reportWebVitals';
 import App from './App';
