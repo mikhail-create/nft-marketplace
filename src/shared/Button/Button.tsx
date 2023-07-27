@@ -1,8 +1,8 @@
 import React from 'react';
-import { ButtonType } from 'types/ButtonType';
+import { ButtonPropsType } from 'types/ButtonPropsType';
 import styles from './Button.module.scss';
 
-function Button({ title, size, icon, isBordered }: ButtonType) {
+function Button({ title, size, icon, isBordered }: ButtonPropsType) {
   let buttonClasses = styles.button;
 
   if (size === 'Large') {

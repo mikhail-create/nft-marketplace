@@ -1,4 +1,4 @@
-export interface ButtonType {
+export interface ButtonPropsType {
   title: string,
   size: string,
   icon?: React.ReactElement,

@@ -1,4 +1,4 @@
-export interface CollectionCardType {
+export interface CollectionCardPropsType {
   images: string[],
   amount: number,
   name: string,

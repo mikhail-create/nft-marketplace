@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './CollectionCard.module.scss'
 import Avatar from 'assets/images/avatar-placeholder.webp'
-import { CollectionCardType } from 'types/CollectionCardType'
+import { CollectionCardPropsType } from 'types/CollectionCardPropsType'
 
-function CollectionCard({ images, amount, name, author }: CollectionCardType) {
+function CollectionCard({ images, amount, name, author }: CollectionCardPropsType) {
 
   return (
     <div className={styles.card}>
