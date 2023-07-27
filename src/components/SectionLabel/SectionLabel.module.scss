@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 10px;
   font-family: "Work Sans";
+  text-transform: capitalize;
 
   &__title {
     font-weight: 600;
@@ -14,7 +15,6 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 160%;
-    text-transform: capitalize;
   }
 }
 
