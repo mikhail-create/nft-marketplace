@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, useCycle } from 'framer-motion';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
 import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
 import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
@@ -8,7 +9,28 @@ import Icons from 'shared/Icons'
 
 import styles from './Header.module.scss'
 
+const sidebar = {
+  open: {
+    clipPath: 'circle(400px at 50% 0)',
+    transition: {
+      type: 'spring',
+      stiffness: 50,
+      restDelta: 2
+    }
+  },
+  closed: {
+    clipPath: 'circle(0px at 50% 0)',
+    transition: {
+      type: 'spring',
+      stiffness: 400,
+      damping: 40
+    }
+  }
+};
+
 function Header() {
+  const [isOpen, toggleOpen] = useCycle(false, true);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
@@ -28,9 +50,19 @@ function Header() {
           />
         </div>
       </nav>
-      <span className={styles.header_menu}>
+      <span className={styles.header_menu} onClick={() => toggleOpen()}>
         <BurgerMenu fill='white' />
       </span>
+      <motion.nav
+        className={styles.header_sidebar}
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        variants={sidebar}
+      >
+        <CustomNavLink path='/' title='Marketplace' />
+        <CustomNavLink path='/' title='Rankings' />
+        <CustomNavLink path='/' title='Connect a wallet' />
+      </motion.nav>
     </header>
   )
 }

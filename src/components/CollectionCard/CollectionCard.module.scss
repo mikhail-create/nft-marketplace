@@ -12,6 +12,11 @@
     transition: transform 500ms;
     cursor: pointer;
 
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+
     &:hover {
       transform: scale(0.95);
     }
@@ -36,6 +41,11 @@
       line-height: 160%;
       transition: transform 500ms;
       cursor: pointer;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
 
       &:hover {
         transform: scale(0.95);
@@ -63,6 +73,29 @@
       width: 24px;
       height: 24px;
       border-radius: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+
+}
+
+@media screen and (max-width: 835px) {
+  .card {
+    width: 315px;
+    height: 505px;
+
+    &__img {
+      width: 315px;
+      height: 315px;
+    }
+
+    &_list {
+      &__item {
+        width: 95px;
+        height: 95px;
+      }
     }
   }
 }
