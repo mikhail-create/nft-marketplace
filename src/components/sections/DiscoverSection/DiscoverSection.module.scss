@@ -1,17 +1,17 @@
-.creators {
+.discover {
+  padding: 80px 115px;
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 80px 115px;
 
   &_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: first flex-end;
+    align-items: flex-end;
 
     &__button {
-      width: 247px;
+      width: 187px;
     }
   }
 
@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    flex-wrap: wrap;
   }
 
   &__button {
@@ -28,16 +27,20 @@
 }
 
 @media screen and (min-width: 836px) and (max-width: 1279px) {
-  .creators {
+  .discover {
     padding: 40px 72px;
-    gap: 40px;
+
+    &_list {
+      span:nth-child(3) {
+        display: none;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 835px) {
-  .creators {
+  .discover {
     padding: 40px 30px;
-    gap: 40px;
 
     &_header {
       &__button {
@@ -47,6 +50,11 @@
 
     &__button {
       display: block;
+    }
+
+    &_list {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }

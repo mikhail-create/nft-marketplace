@@ -9,7 +9,7 @@
     width: 330px;
     height: 330px;
     border-radius: 20px;
-    transition: 500ms;
+    transition: transform 500ms;
     cursor: pointer;
 
     &:hover {
@@ -34,7 +34,7 @@
       font-size: 22px;
       font-weight: 600;
       line-height: 160%;
-      transition: 500ms;
+      transition: transform 500ms;
       cursor: pointer;
 
       &:hover {

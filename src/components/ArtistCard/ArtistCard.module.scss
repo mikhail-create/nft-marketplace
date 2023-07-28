@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 20px;
   position: relative;
-  transition: 500ms;
+  transition: transform 500ms;
 
   &:hover {
     cursor: pointer;

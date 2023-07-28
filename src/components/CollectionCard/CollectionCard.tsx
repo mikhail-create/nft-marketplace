@@ -8,10 +8,10 @@ function CollectionCard({ images, amount, name, author }: CollectionCardPropsTyp
 
   return (
     <div className={styles.card}>
-      <img className={styles.card__img} srcSet={images[0]} alt='Primary Image' />
+      <img className={styles.card__img} srcSet={images[0]} alt='Primary' />
       <div className={styles.card_list}>
-        <img className={styles.card_list__item} srcSet={images[1]} alt='Primary Image' />
-        <img className={styles.card_list__item} srcSet={images[2]} alt='Primary Image' />
+        <img className={styles.card_list__item} srcSet={images[1]} alt='Primary' />
+        <img className={styles.card_list__item} srcSet={images[2]} alt='Primary' />
         <div className={styles.card_list__item}>
           {amount + '+'}
         </div>

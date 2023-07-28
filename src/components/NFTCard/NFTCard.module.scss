@@ -1,0 +1,91 @@
+.card {
+  width: 330px;
+  height: 470px;
+  border-radius: 20px;
+  background-color: var(--bg-color--secondary);
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 330px;
+    height: 296px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &_title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__name {
+      font-family: "Work Sans";
+      font-size: 22px;
+      line-height: 140%;
+      font-weight: 600;
+    }
+
+    &__author {
+      font-family: "Space Mono";
+      line-height: 140%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &_stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: var(--text-color--secondary);
+      font-family: "Space Mono";
+      font-size: 12px;
+      line-height: 110%;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: "Space Mono";
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .card {
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .card {
+    width: 315px;
+    height: 402px;
+
+    &__img {
+      width: 315px;
+      height: 238px;
+    }
+  }
+}
