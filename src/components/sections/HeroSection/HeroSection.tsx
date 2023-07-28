@@ -1,8 +1,8 @@
 import React from 'react'
-import { ReactComponent as Rocket } from 'assets/icons/rocket.svg'
 import ImagePlaceholder from 'assets/images/image-placeholder.webp'
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
 import Button from 'shared/Button/Button'
+import Icons from 'shared/Icons'
 
 import styles from './HeroSection.module.scss'
 
@@ -21,7 +21,7 @@ function HeroSection() {
             title='Get Started'
             size='Medium'
             isBordered={false}
-            icon={<Rocket fill='white' />}
+            icon={<Icons.RocketLaunch fill='white' width={20} height={20} />}
           />
         </span>
         <div className={styles.hero_info__stats}>

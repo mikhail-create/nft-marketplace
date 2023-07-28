@@ -1,10 +1,10 @@
 import React from 'react'
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
 import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
-import { ReactComponent as User } from 'assets/icons/user.svg'
 import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
 import CustomNavLink from 'shared/CustomNavLink/CustomNavLink'
 import Button from 'shared/Button/Button'
+import Icons from 'shared/Icons'
 
 import styles from './Header.module.scss'
 
@@ -24,7 +24,7 @@ function Header() {
             size='Medium'
             title='Sign Up'
             isBordered={false}
-            icon={<User fill='white' />}
+            icon={<Icons.User fill='white' width={20} height={20} />}
           />
         </div>
       </nav>

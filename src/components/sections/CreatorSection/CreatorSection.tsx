@@ -1,9 +1,9 @@
 import React from 'react'
-import { ReactComponent as Rocket } from 'assets/icons/rocket.svg'
 import Avatar from 'assets/images/avatar-placeholder-big.webp'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
-import Button from 'shared/Button/Button'
 import ArtistCard from 'components/ArtistCard/ArtistCard'
+import Button from 'shared/Button/Button'
+import Icons from 'shared/Icons'
 
 import styles from './CreatorSection.module.scss'
 
@@ -17,7 +17,7 @@ function CreatorSection() {
             title='View Rankings'
             size='Medium'
             isBordered={true}
-            icon={<Rocket fill='white' />}
+            icon={<Icons.RocketLaunch width={20} height={20} stroke='#A259FF' />}
           />
         </div>
       </div>
@@ -88,7 +88,7 @@ function CreatorSection() {
           title='View Rankings'
           size='Medium'
           isBordered={true}
-          icon={<Rocket fill='white' />}
+          icon={<Icons.RocketLaunch width={20} height={20} stroke='#A259FF' />}
         />
       </div>
     </div>
