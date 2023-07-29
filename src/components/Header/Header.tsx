@@ -11,7 +11,7 @@ import styles from './Header.module.scss'
 
 const sidebar = {
   open: {
-    clipPath: 'circle(400px at 50% 0)',
+    clipPath: 'circle(500px at 50% 0)',
     transition: {
       type: 'spring',
       stiffness: 50,
@@ -27,6 +27,11 @@ const sidebar = {
     }
   }
 };
+
+const variants = {
+  open: { rotate: -90 },
+  closed: { rotate: 0 },
+}
 
 function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -50,15 +55,26 @@ function Header() {
           />
         </div>
       </nav>
-      <span className={styles.header_menu} onClick={() => toggleOpen()}>
+      <motion.span
+        className={styles.header_menu}
+        onClick={() => toggleOpen()}
+        animate={isOpen ? 'open' : 'closed'}
+        variants={variants}
+      >
         <BurgerMenu fill='white' />
-      </span>
+      </motion.span>
       <motion.nav
         className={styles.header_sidebar}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         variants={sidebar}
       >
+        <Button
+          size='Medium'
+          title='Sign Up'
+          isBordered={false}
+          icon={<Icons.User fill='white' width={20} height={20} />}
+        />
         <CustomNavLink path='/' title='Marketplace' />
         <CustomNavLink path='/' title='Rankings' />
         <CustomNavLink path='/' title='Connect a wallet' />

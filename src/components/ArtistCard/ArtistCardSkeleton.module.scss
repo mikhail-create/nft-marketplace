@@ -1,0 +1,121 @@
+.card {
+  width: 240px;
+  height: 238px;
+  border-radius: 20px;
+  background-color: var(--bg-color--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+
+  &__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-left: 10px;
+    background-color: var(--loading-color);
+    animation: loadingAnimation 2s infinite linear;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+
+    &__name {
+      width: 188px;
+      height: 31px;
+      border-radius: 15px;
+      background-color: var(--loading-color);
+      animation: loadingAnimation 2s infinite linear;
+    }
+
+    &__price {
+      width: 88px;
+      height: 22px;
+      border-radius: 15px;
+      background-color: var(--loading-color);
+      animation: loadingAnimation 2s infinite linear;
+    }
+
+    &__currency {
+      width: 88px;
+      height: 22px;
+      border-radius: 15px;
+      background-color: var(--loading-color);
+      animation: loadingAnimation 2s infinite linear;
+    }
+
+    > div {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .card {
+    width: 330px;
+    height: 100px;
+    flex-direction: row;
+
+    &__rank {
+      top: 13px;
+      left: 12px;
+    }
+
+    &__avatar {
+      margin-left: 0;
+      width: 60px;
+      height: 60px;
+    }
+
+    &_info {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .card {
+    width: 330px;
+    height: 100px;
+    flex-direction: row;
+
+    &__rank {
+      top: 13px;
+      left: 12px;
+    }
+
+    &__avatar {
+      margin-left: 0;
+      width: 60px;
+      height: 60px;
+    }
+
+    &_info {
+      text-align: left;
+    }
+  }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
