@@ -1,0 +1,129 @@
+.highlighted {
+  width: 100%;
+  height: 640px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+    z-index: 2;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_card {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 0 60px 115px;
+
+      .card__author {
+        display: flex;
+        padding: 10px 20px;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+        gap: 12px;
+        background-color: var(--bg-color--secondary);
+        border-radius: 20px;
+        font-family: "Work Sans";
+      }
+
+      .card__title {
+        font-family: "Work Sans";
+      }
+
+      .card__button {
+        width: 198px;
+      }
+    }
+
+    &__time {
+      margin: 0 115px 60px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 295px;
+      height: 147px;
+      border-radius: 20px;
+      background: rgba(59, 59, 59, 0.5);
+      backdrop-filter: blur(5px);
+      font-family: "Space Mono";
+
+      > span {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 12px;
+        line-height: 110%;
+        font-weight: 400;
+      }
+
+      .card_timer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &__row {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 120%;
+          text-transform: capitalize;
+
+          > span {
+            width: 53px;
+          }
+
+          > span:nth-child(even) {
+            width: 18px;
+            line-height: 140%;
+            font-size: 28px;
+          }
+        }
+
+        &__values {
+          display: flex;
+          flex-direction: row;
+          gap: 38px;
+          font-size: 12px;
+          line-height: 110%;
+          font-weight: 400;
+
+          > span {
+            width: 53px;
+          }
+        }
+      }
+    }
+  }
+}

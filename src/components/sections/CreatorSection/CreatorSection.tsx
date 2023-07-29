@@ -82,24 +82,6 @@ const artists = [
     name: 'James',
     balance: '88.50',
   },
-  {
-    id: 13,
-    rank: 13,
-    name: 'Mia',
-    balance: '47.60',
-  },
-  {
-    id: 14,
-    rank: 14,
-    name: 'Benjamin',
-    balance: '112.80',
-  },
-  {
-    id: 15,
-    rank: 15,
-    name: 'Evelyn',
-    balance: '58.90',
-  },
 ];
 
 function CreatorSection() {

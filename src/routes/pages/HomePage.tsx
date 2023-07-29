@@ -4,6 +4,7 @@ import CreatorSection from 'components/sections/CreatorSection/CreatorSection'
 import HeroSection from 'components/sections/HeroSection/HeroSection'
 import TrendingSection from 'components/sections/TrendingSection/TrendingSection'
 import DiscoverSection from 'components/sections/DiscoverSection/DiscoverSection'
+import HighlightedNFTSection from 'components/sections/HighlightedNFTSection/HighlightedNFTSection'
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <CreatorSection />
       <CategoriesSection />
       <DiscoverSection />
+      <HighlightedNFTSection />
     </div>
   )
 }

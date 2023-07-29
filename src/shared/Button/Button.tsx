@@ -3,7 +3,7 @@ import { ButtonPropsType } from 'types/ButtonPropsType';
 
 import styles from './Button.module.scss';
 
-function Button({ title, size, icon, isBordered }: ButtonPropsType) {
+function Button({ title, size, icon, isBordered, isWhite }: ButtonPropsType) {
   let buttonClasses = styles.button;
 
   if (size === 'Large') {
@@ -16,6 +16,10 @@ function Button({ title, size, icon, isBordered }: ButtonPropsType) {
 
   if (isBordered) {
     buttonClasses += ` ${styles.bordered}`;
+  }
+
+  if (isWhite) {
+    buttonClasses += ` ${styles.white}`;
   }
 
   return (
