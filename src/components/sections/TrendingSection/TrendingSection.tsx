@@ -9,7 +9,7 @@ import styles from './TrendingSection.module.scss'
 
 function TrendingSection() {
   return (
-    <div className={styles.trending}>
+    <section className={styles.trending}>
       <SectionLabel title='Trending Collection' subtitle='Checkout our weekly updated trending collection.' />
       <div className={styles.trending_list}>
         <div className={styles.trending_list__item}>
@@ -37,7 +37,7 @@ function TrendingSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

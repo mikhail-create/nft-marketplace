@@ -86,7 +86,7 @@ const artists = [
 
 function CreatorSection() {
   return (
-    <div className={styles.creators}>
+    <section className={styles.creators}>
       <div className={styles.creators_header}>
         <SectionLabel title='Top creators' subtitle='Checkout Top Rated Creators on the NFT Marketplace' />
         <div className={styles.creators_header__button}>
@@ -118,7 +118,7 @@ function CreatorSection() {
           icon={<Icons.RocketLaunch width={20} height={20} stroke='#A259FF' />}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -8,7 +8,7 @@ import styles from './HeroSection.module.scss'
 
 function HeroSection() {
   return (
-    <div className={styles.hero}>
+    <section className={styles.hero}>
       <div className={styles.hero_info}>
         <h1 className={styles.hero_info__title}>
           Discover digital art & Collect NFTs
@@ -59,7 +59,7 @@ function HeroSection() {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

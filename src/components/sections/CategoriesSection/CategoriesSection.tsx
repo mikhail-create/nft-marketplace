@@ -20,7 +20,7 @@ function CategoriesSection() {
   ];
 
   return (
-    <div className={styles.categories}>
+    <section className={styles.categories}>
       <SectionLabel title='Browse Categories' />
       <nav className={styles.categories_list}>
         {categoriesData.map((category, index) => (
@@ -33,7 +33,7 @@ function CategoriesSection() {
           />
         ))}
       </nav>
-    </div>
+    </section>
   );
 }
 

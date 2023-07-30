@@ -7,7 +7,7 @@ import styles from './HighlightedNFTSection.module.scss'
 
 function HighlightedNFTSection() {
   return (
-    <div className={styles.highlighted}>
+    <section className={styles.highlighted}>
       <div className={styles.highlighted__bg}>
         <img srcSet={Images.NFTHighlighted} alt='BG' />
       </div>
@@ -62,7 +62,7 @@ function HighlightedNFTSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

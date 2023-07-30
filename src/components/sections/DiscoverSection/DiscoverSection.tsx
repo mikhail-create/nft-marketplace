@@ -8,7 +8,7 @@ import styles from './DiscoverSection.module.scss'
 
 function DiscoverSection() {
   return (
-    <div className={styles.discover}>
+    <section className={styles.discover}>
       <div className={styles.discover_header}>
         <SectionLabel title='Discover More NFTs' subtitle='Explore new trending NFTs' />
         <div className={styles.discover_header__button}>
@@ -39,7 +39,7 @@ function DiscoverSection() {
           icon={<Icons.Eye width={20} height={20} stroke='white' />}
         />
       </div>
-    </div>
+    </section>
   )
 }
 
