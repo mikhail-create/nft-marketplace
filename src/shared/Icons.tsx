@@ -34,6 +34,11 @@ import { ReactComponent as WalletConnect } from 'assets/icons/button/wallet-conn
 import { ReactComponent as Wallet } from 'assets/icons/button/wallet.svg';
 import { ReactComponent as YoutubeLogo } from 'assets/icons/button/youtube-logo.svg';
 
+//FAQ
+import { ReactComponent as FAQ1 } from 'assets/icons/faq/faq-1.svg';
+import { ReactComponent as FAQ2 } from 'assets/icons/faq/faq-2.svg';
+import { ReactComponent as FAQ3 } from 'assets/icons/faq/faq-3.svg';
+
 const Icons = {
   PaintBrush,
   Camera,
@@ -69,6 +74,10 @@ const Icons = {
   WalletConnect,
   Wallet,
   YoutubeLogo,
+  //FAQ
+  FAQ1,
+  FAQ2,
+  FAQ3,
 };
 
 export default Icons;
