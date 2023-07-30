@@ -15,7 +15,7 @@ function HighlightedNFTSection() {
       <div className={styles.highlighted_card}>
         <div className={styles.highlighted_card__info}>
           <span className={styles.card__author}><img srcSet={Images.AvatarPlaceholder} alt='Avatar' />Shroomie</span>
-          <h2 className={styles.card__title}>Magic Mashrooms</h2>
+          <span className={styles.card__title}>Magic Mashrooms</span>
           <div className={styles.card__button}>
             <Button
               title='See NFT'

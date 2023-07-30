@@ -7,14 +7,14 @@
   &_list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 30px;
   }
 }
 
 @media screen and (min-width: 836px) and (max-width: 1279px) {
   .trending {
     padding: 40px 72px;
-    gap: 40px;
+    gap: 30px;
 
     &_list {
       &__item:nth-child(3) {
@@ -27,7 +27,6 @@
 @media screen and (max-width: 835px) {
   .trending {
     padding: 40px 30px;
-    gap: 40px;
 
     &_list {
       &__item:nth-child(n+2) {
