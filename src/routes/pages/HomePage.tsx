@@ -6,6 +6,7 @@ import TrendingSection from 'components/sections/TrendingSection/TrendingSection
 import DiscoverSection from 'components/sections/DiscoverSection/DiscoverSection'
 import HighlightedNFTSection from 'components/sections/HighlightedNFTSection/HighlightedNFTSection'
 import HowItWorkSection from 'components/sections/HowItWorkSection/HowItWorkSection'
+import SubscribeSection from 'components/sections/SubscribeSection/SubscribeSection'
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <DiscoverSection />
       <HighlightedNFTSection />
       <HowItWorkSection />
+      <SubscribeSection />
     </div>
   )
 }

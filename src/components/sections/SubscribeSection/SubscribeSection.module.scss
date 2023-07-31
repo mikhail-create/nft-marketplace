@@ -1,0 +1,166 @@
+.section {
+  padding: 40px 115px 80px 115px;
+
+  &_content {
+    display: flex;
+    width: 1050px;
+    padding: 60px;
+    align-items: center;
+    gap: 80px;
+    border-radius: 20px;
+    background: var(--bg-color--secondary);
+
+    &__img {
+      width: 425px;
+      height: 310px;
+      border-radius: 20px;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      font-family: "Work Sans";
+      text-transform: capitalize;
+      width: 425px;
+
+      .title {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 160%;
+        margin-bottom: 40px;
+      }
+
+      .form {
+        display: flex;
+        height: 60px;
+        padding: 16px 0px 16px 20px;
+        align-items: center;
+        gap: 12px;
+        border-radius: 20px;
+        background-color: var(--text-color);
+
+        > input {
+          line-height: 140%;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:active {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .section {
+    padding: 40px 72px 80px 72px;
+    gap: 40px;
+
+    &_content {
+      width: 690px;
+      padding: 40px 30px;
+      gap: 30px;
+
+      &__img {
+        width: 300px;
+        height: 280px;
+      }
+
+      &__info {
+        width: 300px;
+        height: 280px;
+
+        .title {
+          font-size: 28px;
+          line-height: 140%;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          line-height: 140%;
+        }
+
+        .form {
+          flex-direction: column;
+          gap: 16px;
+          height: fit-content;
+          padding: 0;
+          background-color: inherit;
+
+          > input {
+            width: 100%;
+            height: 46px;
+            padding: 12px 20px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .section {
+    padding: 40px 30px;
+
+    &_content {
+      width: 315px;
+      padding: 0;
+      gap: 30px;
+      flex-direction: column;
+      background-color: inherit;
+
+      &__img {
+        width: 315px;
+        height: 255px;
+      }
+
+      &__info {
+        width: 300px;
+        height: 280px;
+
+        .title {
+          font-size: 28px;
+          line-height: 140%;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          line-height: 140%;
+        }
+
+        .form {
+          flex-direction: column;
+          gap: 16px;
+          height: fit-content;
+          padding: 0;
+          background-color: inherit;
+
+          > input {
+            width: 100%;
+            height: 46px;
+            padding: 12px 20px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}

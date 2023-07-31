@@ -11,6 +11,7 @@
     flex-direction: row;
     align-items: center;
     gap: 12px;
+    z-index: 2;
   }
 
   &_nav {
@@ -26,6 +27,7 @@
 
   &_menu {
     display: none;
+    z-index: 2;
   }
 
   &_sidebar {

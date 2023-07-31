@@ -14,6 +14,7 @@ import NFTHighlighted from 'assets/images/nft/NFT-highlighted.webp'
 
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
 import AvatarPlaceholderBig from 'assets/images/avatar-placeholder-big.webp'
+import Newsletter from 'assets/images/newsletter.webp'
 
 const Images = {
   Categories0,
@@ -29,7 +30,8 @@ const Images = {
   NFT2,
   NFTHighlighted,
   AvatarPlaceholder,
-  AvatarPlaceholderBig
+  AvatarPlaceholderBig,
+  Newsletter
 };
 
 export default Images;

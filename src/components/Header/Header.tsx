@@ -11,20 +11,12 @@ import styles from './Header.module.scss'
 
 const sidebar = {
   open: {
-    clipPath: 'circle(500px at 50% 0)',
-    transition: {
-      type: 'spring',
-      stiffness: 50,
-      restDelta: 2
-    }
+    y: 0,
+    opacity: 10,
   },
   closed: {
-    clipPath: 'circle(0px at 50% 0)',
-    transition: {
-      type: 'spring',
-      stiffness: 400,
-      damping: 40
-    }
+    y: -10,
+    opacity: 0,
   }
 };
 
