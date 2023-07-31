@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import ThemeToggle from 'shared/Theme/ThemeToggle';
 import { ThemeContextType } from 'types/ThemeContextType';
 import Button from 'shared/Button/Button';
-import Header from 'components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import routes from 'routes/routes';
 
@@ -33,6 +34,7 @@ function MainLayout(child: any) {
           />
         ))}
       </Routes>
+      <Footer />
       {/* <ThemeToggle
         onChange={handleToggle}
         value={theme === themes.dark}

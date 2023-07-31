@@ -39,6 +39,10 @@ import { ReactComponent as FAQ1 } from 'assets/icons/faq/faq-1.svg';
 import { ReactComponent as FAQ2 } from 'assets/icons/faq/faq-2.svg';
 import { ReactComponent as FAQ3 } from 'assets/icons/faq/faq-3.svg';
 
+//LOGO
+import { ReactComponent as Logo } from 'assets/icons/logo.svg'
+import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
+
 const Icons = {
   PaintBrush,
   Camera,
@@ -78,6 +82,9 @@ const Icons = {
   FAQ1,
   FAQ2,
   FAQ3,
+  //LOGO
+  Logo,
+  LogoText
 };
 
 export default Icons;

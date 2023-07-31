@@ -1,0 +1,123 @@
+.footer {
+  width: 100%;
+  background-color: var(--bg-color--secondary);
+  padding: 40px 115px;
+  font-family: "Work Sans";
+
+  &__wrapper {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_column {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      font-family: "Space Mono";
+      gap: 12px;
+      height: 35px;
+      margin-bottom: 25px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: var(--text-color);
+    }
+
+    &__item {
+      max-width: 320px;
+      line-height: 140%;
+      color: var(--text-color--secondary);
+      margin-bottom: 20px;
+    }
+
+    &__media {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form {
+      display: flex;
+      width: 420px;
+      height: 60px;
+      padding: 16px 0px 16px 20px;
+      align-items: center;
+      gap: 12px;
+      border-radius: 20px;
+      background-color: var(--text-color);
+
+      > input {
+        line-height: 140%;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: var(--text-color--secondary);
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 110%;
+    color: var(--text-color--secondary);
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .footer {
+    padding: 40px 72px;
+
+    &__wrapper {
+      padding: 0;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .footer {
+    padding: 40px 30px;
+
+    &__wrapper {
+      padding: 0;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &_column {
+      .form {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        height: fit-content;
+        padding: 0;
+        background-color: inherit;
+
+        > input {
+          width: 100%;
+          height: 46px;
+          padding: 12px 20px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
