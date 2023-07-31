@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion, useCycle } from 'framer-motion';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
 import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
@@ -6,6 +6,8 @@ import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
 import CustomNavLink from 'shared/CustomNavLink/CustomNavLink'
 import Button from 'shared/Button/Button'
 import Icons from 'shared/Icons'
+import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
+import { ThemeContextType } from 'types/ThemeContextType';
 
 import styles from './Header.module.scss'
 
@@ -27,12 +29,13 @@ const variants = {
 
 function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const { theme } = useContext<ThemeContextType>(ThemeContext);
 
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
         <Logo />
-        <LogoText fill='white' />
+        <LogoText fill={theme === themes.dark ? 'white' : '#444444'} />
       </div>
       <nav className={styles.header_nav}>
         <CustomNavLink path='/' title='Marketplace' />

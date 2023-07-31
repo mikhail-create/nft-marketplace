@@ -53,6 +53,8 @@
       > input {
         line-height: 140%;
         border: none;
+        background: inherit;
+        color: var(--bg-color--secondary);
 
         &:focus {
           outline: none;
@@ -112,6 +114,7 @@
         background-color: inherit;
 
         > input {
+          background: var(--text-color);
           width: 100%;
           height: 46px;
           padding: 12px 20px;

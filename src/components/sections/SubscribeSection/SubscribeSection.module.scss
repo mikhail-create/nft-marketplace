@@ -54,6 +54,8 @@
         > input {
           line-height: 140%;
           border: none;
+          background: inherit;
+          color: var(--bg-color--secondary);
 
           &:focus {
             outline: none;
@@ -158,6 +160,7 @@
             height: 46px;
             padding: 12px 20px;
             border-radius: 20px;
+            
           }
         }
       }

@@ -24,6 +24,10 @@ function MainLayout(child: any) {
 
   return (
     <div className={styles.layout}>
+      <ThemeToggle
+        onChange={handleToggle}
+        value={theme === themes.dark}
+      />
       <Header />
       <Routes>
         {routes.map(route => (
@@ -35,10 +39,6 @@ function MainLayout(child: any) {
         ))}
       </Routes>
       <Footer />
-      {/* <ThemeToggle
-        onChange={handleToggle}
-        value={theme === themes.dark}
-      /> */}
     </div>
   )
 }

@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import Icons from 'shared/Icons'
 import Button from 'shared/Button/Button'
+import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
+import { ThemeContextType } from 'types/ThemeContextType';
 
 import styles from './Footer.module.scss'
 
 function Footer() {
-
   const isSmallScreen = useMediaQuery({ maxWidth: 835 });
+  const { theme } = useContext<ThemeContextType>(ThemeContext);
 
   return (
     <footer className={styles.footer}>
@@ -15,7 +17,7 @@ function Footer() {
         <div className={styles.footer_column}>
           <span className={styles.footer_column__title}>
             <Icons.Logo />
-            <Icons.LogoText fill='white' />
+            <Icons.LogoText fill={theme === themes.dark ? 'white' : '#444444'} />
           </span>
           <span className={styles.footer_column__item}>
             NFT marketplace UI created with Anima for Figma.
