@@ -13,11 +13,11 @@ import styles from './Header.module.scss'
 
 const sidebar = {
   open: {
-    y: 0,
-    opacity: 10,
+    y: 15,
+    opacity: 1,
   },
   closed: {
-    y: -10,
+    y: -15,
     opacity: 0,
   }
 };
