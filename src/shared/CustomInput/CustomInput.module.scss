@@ -1,3 +1,7 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
 .input {
   border: 1px solid var(--bg-color);
   width: 100%;
@@ -21,4 +25,27 @@
   position: absolute;
   margin-top: 13px;
   margin-left: 20px;
+}
+
+.error {
+  font-family: 'Work Sans';
+  position: relative;
+  top: -75%;
+  left: 0;
+  background-color: var(--error-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 9px;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: var(--error-color) transparent transparent transparent;
+  }
 }

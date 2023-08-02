@@ -60,11 +60,16 @@
         align-items: center;
         justify-content: center;
         gap: 12px;
-        transition: transform 500ms;
+        transition: transform 500ms, background-color 500ms;
+        cursor: pointer;
 
         &:hover {
-          cursor: pointer;
           transform: scale(0.9);
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: var(--error-color);
         }
       }
     }
