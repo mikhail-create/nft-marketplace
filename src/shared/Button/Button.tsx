@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+import { motion } from 'framer-motion';
 import { ButtonPropsType } from 'types/ButtonPropsType';
 
 import styles from './Button.module.scss';
 
-function Button({ title, size, icon, isBordered, isWhite }: ButtonPropsType) {
+export const Button = forwardRef<HTMLButtonElement, ButtonPropsType>(({ title, size, icon, isBordered, isWhite }, ref) => {
   let buttonClasses = styles.button;
 
   if (size === 'Large') {
@@ -23,11 +24,14 @@ function Button({ title, size, icon, isBordered, isWhite }: ButtonPropsType) {
   }
 
   return (
-    <button className={buttonClasses}>
+    <button
+      className={buttonClasses}
+      ref={ref}
+    >
       {icon && <span className={styles.icon}>{icon}</span>}
       <span>{title}</span>
     </button>
   );
-}
+})
 
-export default Button;
+export const MButton = motion(Button);

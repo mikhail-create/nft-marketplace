@@ -2,6 +2,7 @@ import React from 'react';
 
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import ConnectPage from './pages/ConnectPage/ConnectPage';
 
 interface Route {
   path: string;
@@ -16,6 +17,10 @@ const routes: Route[] = [
   {
     path: '/signup',
     component: SignUpPage
+  },
+  {
+    path: '/connect',
+    component: ConnectPage
   },
 ];
 

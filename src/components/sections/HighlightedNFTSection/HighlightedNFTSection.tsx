@@ -1,6 +1,6 @@
 import React from 'react'
 import Images from 'shared/Images'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
 import styles from './HighlightedNFTSection.module.scss'

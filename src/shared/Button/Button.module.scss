@@ -12,10 +12,10 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  transition: transform 500ms;
+  cursor: pointer;
+  // transition: transform 500ms;
 
   &:hover {
-    cursor: pointer;
     transform: scale(0.9);
   }
 
@@ -45,8 +45,10 @@
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
 }
 
 .white {

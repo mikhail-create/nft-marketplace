@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import Icons from 'shared/Icons'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import { ThemeContextType } from 'types/ThemeContextType';
 

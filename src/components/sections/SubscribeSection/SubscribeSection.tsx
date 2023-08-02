@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Images from 'shared/Images'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
 import styles from './SubscribeSection.module.scss'

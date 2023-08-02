@@ -1,7 +1,7 @@
 import React from 'react'
 import ImagePlaceholder from 'assets/images/image-placeholder.webp'
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
 import styles from './HeroSection.module.scss'

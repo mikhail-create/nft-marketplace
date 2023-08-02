@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import Avatar from 'assets/images/avatar-placeholder-big.webp'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
 import ArtistCardSkeleton from 'components/ArtistCard/ArtistCardSkeleton'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
 import styles from './CreatorSection.module.scss'

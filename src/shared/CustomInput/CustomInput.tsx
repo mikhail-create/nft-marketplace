@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+import { motion } from 'framer-motion';
 import { useField } from 'formik';
 import { CustomInputPropsType } from 'types/CustomInputPropsType';
 
 import styles from './CustomInput.module.scss';
 
-function CustomInput({ icon, placeholder, type, ...props }: CustomInputPropsType) {
+export const CustomInput = forwardRef<HTMLDivElement, CustomInputPropsType>(({ icon, placeholder, type, ...props }, ref) => {
   const [field, meta] = useField(props);
 
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={styles.wrapper}
+      ref={ref}
+    >
       {meta.touched && meta.error && <div className={styles.error}>{meta.error}</div>}
       <label>
         {icon && <label className={styles.icon}>{icon}</label>}
@@ -21,6 +25,6 @@ function CustomInput({ icon, placeholder, type, ...props }: CustomInputPropsType
       </label>
     </div>
   );
-}
+})
 
-export default CustomInput;
+export const MCustomInput = motion(CustomInput)

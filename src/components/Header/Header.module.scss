@@ -95,6 +95,12 @@
       position: absolute;
       gap: 12px;
       padding: 12px;
+
+      &__item {
+        height: 43px;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@ import Footer from 'components/Footer/Footer';
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import ThemeToggle from 'shared/Theme/ThemeToggle';
 import { ThemeContextType } from 'types/ThemeContextType';
-import Button from 'shared/Button/Button';
 import { Route, Routes } from 'react-router-dom';
 import routes from 'routes/routes';
 

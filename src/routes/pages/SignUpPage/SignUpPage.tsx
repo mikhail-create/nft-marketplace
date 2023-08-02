@@ -1,36 +1,57 @@
 import React, { useEffect } from 'react'
 import { Form, Formik } from 'formik'
+import { motion } from 'framer-motion'
 import { SignUpSchema } from '_helpers/yup'
 import Images from 'shared/Images'
-import CustomInput from 'shared/CustomInput/CustomInput'
 import Icons from 'shared/Icons'
+import { MCustomInput } from 'shared/CustomInput/CustomInput'
 import { SignUpType } from 'types/SignUpType'
 
 import styles from './SignUpPage.module.scss'
+
+const elemAnimation = {
+  hidden: {
+    x: -50,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 }
+  })
+}
 
 function SignUpPage() {
   useEffect(() => {
     document.title = 'Create account'
   }, [])
 
-  const handleSubmit = (values: SignUpType) => {
+  const handleSubmit = (values: SignUpType): any => {
     console.log(values);
-  }
+  };
 
   return (
-    <div className={styles.page}>
+    <motion.div
+      initial='hidden'
+      whileInView='visible'
+      className={styles.page}
+    >
       <div className={styles.page__preview}>
         <img srcSet={Images.SignUpPlaceholder} alt='SignUp Placeholder' />
       </div>
       <div className={styles.page_content}>
-        <div className={styles.page_content__header}>
+        <motion.div
+          className={styles.page_content__header}
+          variants={elemAnimation}
+          custom={1}
+        >
           <h1 className={styles.title}>
             Create account
           </h1>
           <p className={styles.subtitle}>
             Welcome! enter your details and start creating, collecting and selling NFTs.
           </p>
-        </div>
+        </motion.div>
         <Formik
           initialValues={{
             username: '',
@@ -43,46 +64,56 @@ function SignUpPage() {
         >
           {({ isSubmitting, isValid }) => (
             <Form className={styles.page_content__form}>
-              <CustomInput
+              <MCustomInput
                 icon={<Icons.User fill='#BDBDBD' height={20} width={20} />}
                 placeholder='Username'
                 name='username'
                 id='username'
                 type='text'
+                variants={elemAnimation}
+                custom={2}
               />
-              <CustomInput
+              <MCustomInput
                 icon={<Icons.EnvelopeSimple fill='#BDBDBD' height={20} width={20} />}
                 placeholder='Email Address'
                 name='email'
                 id='email'
                 type='email'
+                variants={elemAnimation}
+                custom={3}
               />
-              <CustomInput
+              <MCustomInput
                 icon={<Icons.LockKey fill='#BDBDBD' height={20} width={20} />}
                 placeholder='Password'
                 name='password'
                 id='password'
                 type='password'
+                variants={elemAnimation}
+                custom={4}
               />
-              <CustomInput
+              <MCustomInput
                 icon={<Icons.LockKey fill='#BDBDBD' height={20} width={20} />}
                 placeholder='Confirm Password'
                 name='passwordRepeat'
                 id='passwordRepeat'
                 type='password'
+                variants={elemAnimation}
+                custom={5}
               />
-              <button
+              <motion.button
                 className={styles.button}
                 type='submit'
                 disabled={!isValid}
+                variants={elemAnimation}
+                custom={6}
               >
                 Create account
-              </button>
+              </motion.button>
             </Form>
           )}
         </Formik>
       </div>
-    </div >
+    </motion.div >
   )
 }
 

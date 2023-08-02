@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
 import NFTCard from 'components/NFTCard/NFTCard'
-import Button from 'shared/Button/Button'
+import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
 import styles from './DiscoverSection.module.scss'

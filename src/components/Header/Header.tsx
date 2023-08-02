@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { motion, useCycle } from 'framer-motion';
+import React, { useContext, useState } from 'react'
+import { motion } from 'framer-motion';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
 import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
 import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
@@ -15,10 +15,12 @@ const sidebar = {
   open: {
     y: 15,
     opacity: 1,
+    display: 'flex'
   },
   closed: {
     y: -15,
     opacity: 0,
+    display: 'none'
   }
 };
 
@@ -28,7 +30,7 @@ const variants = {
 }
 
 function Header() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, toggleOpen] = useState(false);
   const { theme } = useContext<ThemeContextType>(ThemeContext);
 
   return (
@@ -40,7 +42,7 @@ function Header() {
       <nav className={styles.header_nav}>
         <CustomNavLink path='/' title='Marketplace' />
         <CustomNavLink path='/' title='Rankings' />
-        <CustomNavLink path='/' title='Connect a wallet' />
+        <CustomNavLink path='/connect' title='Connect a wallet' />
         <div className={styles.header_nav__button}>
           <ButtonLink
             to='/signup'
@@ -53,7 +55,7 @@ function Header() {
       </nav>
       <motion.span
         className={styles.header_menu}
-        onClick={() => toggleOpen()}
+        onClick={() => toggleOpen(!isOpen)}
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
       >
@@ -65,16 +67,33 @@ function Header() {
         animate={isOpen ? 'open' : 'closed'}
         variants={sidebar}
       >
-        <ButtonLink
-          to='/signup'
-          size='Medium'
-          title='Sign Up'
-          isBordered={false}
-          icon={<Icons.User fill='white' width={20} height={20} />}
-        />
-        <CustomNavLink path='/' title='Marketplace' />
-        <CustomNavLink path='/' title='Rankings' />
-        <CustomNavLink path='/' title='Connect a wallet' />
+        <span onClick={() => toggleOpen(!isOpen)}>
+          <ButtonLink
+            to='/signup'
+            size='Medium'
+            title='Sign Up'
+            isBordered={false}
+            icon={<Icons.User fill='white' width={20} height={20} />}
+          />
+        </span>
+        <span
+          onClick={() => toggleOpen(!isOpen)}
+          className={styles.header_sidebar__item}
+        >
+          <CustomNavLink path='/' title='Marketplace' />
+        </span>
+        <span
+          onClick={() => toggleOpen(!isOpen)}
+          className={styles.header_sidebar__item}
+        >
+          <CustomNavLink path='/' title='Rankings' />
+        </span>
+        <span
+          onClick={() => toggleOpen(!isOpen)}
+          className={styles.header_sidebar__item}
+        >
+          <CustomNavLink path='/connect' title='Connect a wallet' />
+        </span>
       </motion.nav>
     </header>
   )
