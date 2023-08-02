@@ -5,6 +5,7 @@ import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
 import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
 import CustomNavLink from 'shared/CustomNavLink/CustomNavLink'
 import Button from 'shared/Button/Button'
+import ButtonLink from 'shared/Button/ButtonLink';
 import Icons from 'shared/Icons'
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import { ThemeContextType } from 'types/ThemeContextType';
@@ -42,7 +43,8 @@ function Header() {
         <CustomNavLink path='/' title='Rankings' />
         <CustomNavLink path='/' title='Connect a wallet' />
         <div className={styles.header_nav__button}>
-          <Button
+          <ButtonLink
+            to='/signup'
             size='Medium'
             title='Sign Up'
             isBordered={false}
@@ -64,7 +66,8 @@ function Header() {
         animate={isOpen ? 'open' : 'closed'}
         variants={sidebar}
       >
-        <Button
+        <ButtonLink
+          to='/signup'
           size='Medium'
           title='Sign Up'
           isBordered={false}

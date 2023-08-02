@@ -1,0 +1,24 @@
+.input {
+  border: 1px solid var(--bg-color);
+  width: 100%;
+  height: 46px;
+  font-family: "Work Sans";
+  padding: 12px 20px 12px 52px;
+  border-radius: 20px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+.icon {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 20px;
+}
