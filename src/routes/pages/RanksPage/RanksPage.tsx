@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { useMediaQuery } from 'react-responsive';
-import RankCard from 'components/RankCard/RankCard'
+import RankCardSkeletion from 'components/RankCard/RankCardSkeletion';
 
 import styles from './RanksPage.module.scss'
+
+const RankCard = lazy(() => import('../../../components/RankCard/RankCard'));
 
 function RanksPage() {
   const isSmallScreen = useMediaQuery({ maxWidth: 835 });
@@ -50,11 +52,18 @@ function RanksPage() {
           </span>
         </div>
         <ul>
-          <RankCard />
-          <RankCard />
-          <RankCard />
-          <RankCard />
-          <RankCard />
+          <Suspense fallback={<RankCardSkeletion />}>
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+            <RankCard />
+          </Suspense>
         </ul>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import Avatar from 'assets/images/avatar-placeholder-big.webp'
 import SectionLabel from 'components/SectionLabel/SectionLabel'
 import ArtistCardSkeleton from 'components/ArtistCard/ArtistCardSkeleton'
-import { Button } from 'shared/Button/Button'
+import ButtonLink from 'shared/Button/ButtonLink'
 import Icons from 'shared/Icons'
 
 import wrapPromise from '_helpers/wrapPromise'
@@ -102,7 +102,8 @@ function CreatorSection() {
       <div className={styles.creators_header}>
         <SectionLabel title='Top creators' subtitle='Checkout Top Rated Creators on the NFT Marketplace' />
         <div className={styles.creators_header__button}>
-          <Button
+          <ButtonLink
+            to='/ranks'
             title='View Rankings'
             size='Medium'
             isBordered={true}
@@ -111,19 +112,21 @@ function CreatorSection() {
         </div>
       </div>
       <div className={styles.creators_list}>
-        {artists.map((artist) => (
-          <Suspense key={artist.id} fallback={<ArtistCardSkeleton />}>
+        <Suspense fallback={<ArtistCardSkeleton />}>
+          {artists.map((artist) => (
             <ArtistCard
+              key={artist.id}
               rank={artist.rank}
               image={Avatar}
               name={artist.name}
               balance={artist.balance}
             />
-          </Suspense>
-        ))}
+          ))}
+        </Suspense>
       </div>
       <div className={styles.creators__button}>
-        <Button
+        <ButtonLink
+          to='/ranks'
           title='View Rankings'
           size='Medium'
           isBordered={true}
