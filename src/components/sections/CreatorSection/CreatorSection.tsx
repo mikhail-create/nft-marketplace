@@ -5,8 +5,6 @@ import ArtistCardSkeleton from 'components/ArtistCard/ArtistCardSkeleton'
 import ButtonLink from 'shared/Button/ButtonLink'
 import Icons from 'shared/Icons'
 
-import wrapPromise from '_helpers/wrapPromise'
-
 import styles from './CreatorSection.module.scss'
 
 const ArtistCard = lazy(() => import('../../../components/ArtistCard/ArtistCard'));
@@ -93,8 +91,6 @@ const artists = [
 //     }, 1000);
 //   })
 // }
-
-// const peopePromise = wrapPromise(getPeople())
 
 function CreatorSection() {
   return (

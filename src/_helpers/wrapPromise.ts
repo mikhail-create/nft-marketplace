@@ -1,34 +1,29 @@
-function wrapPromise<T>(promise: Promise<T>) {
+const promiseWrapper = <T>(promise: Promise<T>) => {
   let status: 'pending' | 'success' | 'error' = 'pending';
-  let response: T | any; // Using "any" for simplicity, you can provide a more specific type for "response" if needed.
+  let response: T | any;
 
-  const suspender = promise.then(
-    (res: T) => {
+  const suspend = promise.then(
+    (res) => {
       status = 'success';
       response = res;
     },
-    (err: any) => {
+    (err) => {
       status = 'error';
       response = err;
-    },
+    }
   );
 
-  const handler: { [key: string]: () => T | any } = {
-    pending: () => {
-      throw suspender;
+  return {
+    read() {
+      if (status === 'pending') {
+        throw suspend;
+      } else if (status === 'error') {
+        throw response;
+      } else {
+        return response;
+      }
     },
-    error: () => {
-      throw response;
-    },
-    default: () => response,
   };
+};
 
-  const read = () => {
-    const result = handler[status] ? handler[status]() : handler.default();
-    return result;
-  };
-
-  return { read };
-}
-
-export default wrapPromise;
+export default promiseWrapper;

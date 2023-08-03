@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
 import { ReactComponent as LogoText } from 'assets/icons/logo-text.svg'
@@ -35,10 +36,13 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__logo}>
+      <Link
+        to='/'
+        className={styles.header__logo}
+      >
         <Logo />
         <LogoText fill={theme === themes.dark ? 'white' : '#444444'} />
-      </div>
+      </Link>
       <nav className={styles.header_nav}>
         <CustomNavLink path='/' title='Marketplace' />
         <CustomNavLink path='/ranks' title='Rankings' />
