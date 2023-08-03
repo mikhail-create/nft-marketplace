@@ -5,6 +5,8 @@ import ArtistCardSkeleton from 'components/ArtistCard/ArtistCardSkeleton'
 import { Button } from 'shared/Button/Button'
 import Icons from 'shared/Icons'
 
+import wrapPromise from '_helpers/wrapPromise'
+
 import styles from './CreatorSection.module.scss'
 
 const ArtistCard = lazy(() => import('../../../components/ArtistCard/ArtistCard'));
@@ -83,6 +85,16 @@ const artists = [
     balance: '88.50',
   },
 ];
+
+// const getPeople = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(['bob', 'alex'])
+//     }, 1000);
+//   })
+// }
+
+// const peopePromise = wrapPromise(getPeople())
 
 function CreatorSection() {
   return (

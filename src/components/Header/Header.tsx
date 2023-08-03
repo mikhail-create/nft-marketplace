@@ -41,7 +41,7 @@ function Header() {
       </div>
       <nav className={styles.header_nav}>
         <CustomNavLink path='/' title='Marketplace' />
-        <CustomNavLink path='/' title='Rankings' />
+        <CustomNavLink path='/ranks' title='Rankings' />
         <CustomNavLink path='/connect' title='Connect a wallet' />
         <div className={styles.header_nav__button}>
           <ButtonLink
@@ -86,7 +86,7 @@ function Header() {
           onClick={() => toggleOpen(!isOpen)}
           className={styles.header_sidebar__item}
         >
-          <CustomNavLink path='/' title='Rankings' />
+          <CustomNavLink path='/ranks' title='Rankings' />
         </span>
         <span
           onClick={() => toggleOpen(!isOpen)}
