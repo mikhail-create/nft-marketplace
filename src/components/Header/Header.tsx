@@ -59,7 +59,7 @@ function Header() {
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
       >
-        <BurgerMenu fill='white' />
+        <BurgerMenu fill={theme === themes.dark ? 'white' : '#444444'} />
       </motion.span>
       <motion.nav
         className={styles.header_sidebar}

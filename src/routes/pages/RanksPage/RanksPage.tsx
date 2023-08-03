@@ -1,9 +1,12 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive';
 import RankCard from 'components/RankCard/RankCard'
 
 import styles from './RanksPage.module.scss'
 
 function RanksPage() {
+  const isSmallScreen = useMediaQuery({ maxWidth: 835 });
+
   return (
     <div className={styles.ranks}>
       <div className={styles.ranks_header}>
@@ -16,13 +19,13 @@ function RanksPage() {
       </div>
       <div className={styles.ranks_filter}>
         <span className={`${styles.ranks_filter__item} ${styles.active}`}>
-          Today
+          {isSmallScreen ? '1d' : 'Today'}
         </span>
         <span className={styles.ranks_filter__item}>
-          This Week
+          {isSmallScreen ? '7d' : 'This Week'}
         </span>
         <span className={styles.ranks_filter__item}>
-          This Month
+          {isSmallScreen ? '30d' : 'This Month'}
         </span>
         <span className={styles.ranks_filter__item}>
           All Time
