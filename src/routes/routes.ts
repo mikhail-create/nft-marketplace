@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import ConnectPage from './pages/ConnectPage/ConnectPage';
 import RanksPage from './pages/RanksPage/RanksPage';
+import BrowsePage from './pages/BrowsePage/BrowsePage';
 
 interface Route {
   path: string;
@@ -26,6 +27,10 @@ const routes: Route[] = [
   {
     path: '/ranks',
     component: RanksPage
+  },
+  {
+    path: '/browse',
+    component: BrowsePage
   },
 ];
 

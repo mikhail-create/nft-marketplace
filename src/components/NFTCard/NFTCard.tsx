@@ -3,9 +3,13 @@ import Images from 'shared/Images'
 
 import styles from './NFTCard.module.scss'
 
-function NFTCard() {
+interface props {
+  isDarker?: boolean
+}
+
+function NFTCard({ isDarker }: props) {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${isDarker && styles.darker}`}>
       <div className={styles.card__img}>
         <img srcSet={Images.NFT0} alt='NFT' />
       </div>

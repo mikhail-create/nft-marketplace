@@ -1,6 +1,7 @@
 .layout {
   width: var(--desktop-size);
   background-color: var(--bg-color);
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 836px) and (max-width: 1279px) {

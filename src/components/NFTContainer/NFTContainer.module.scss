@@ -1,0 +1,23 @@
+.container {
+  justify-content: center;
+  background-color: var(--bg-color--secondary);
+  box-sizing: content-box;
+  display: flex;
+  padding: 60px 0;
+  width: 1280px;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--bg-color);
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .container {
+    width: 835px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .container {
+    width: 375px;
+  }
+}

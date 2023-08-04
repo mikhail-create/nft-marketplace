@@ -1,0 +1,125 @@
+.page {
+  &_header {
+    padding: 80px 115px;
+    font-family: "Work Sans";
+
+    &__title {
+      font-size: 51px;
+      font-weight: 600;
+      line-height: 110%;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+      line-height: 160%;
+      margin-bottom: 30px;
+    }
+
+    &__search {
+      width: 100%;
+      height: 60px;
+      border-radius: 20px;
+      border: 1px solid var(--text-color--secondary);
+      background-color: var(--bg-color--secondary);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > input {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        color: var(--text-color);
+        width: 960px;
+      }
+    }
+  }
+
+  &_filter {
+    margin-top: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    &__item {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-family: "Work Sans";
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-color--secondary);
+      cursor: pointer;
+
+      > label {
+        width: fit-content;
+        border-radius: 20px;
+        padding: 5px 10px;
+        color: var(--text-color);
+        background-color: var(--bg-color--secondary);
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .label__active {
+        background-color: var(--text-color--secondary);
+      }
+    }
+
+    .active {
+      color: var(--text-color);
+      border-bottom: 1px solid var(--text-color--secondary);
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: var(--bg-color--secondary);
+  }
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .page {
+    &_header {
+      padding: 40px 72px;
+
+      &__title {
+        font-size: 38px;
+        line-height: 120%;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .page {
+    &_header {
+      padding: 30px 40px;
+
+      &__title {
+        font-size: 28px;
+        line-height: 140%;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 140%;
+      }
+    }
+  }
+}

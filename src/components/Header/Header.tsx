@@ -44,7 +44,7 @@ function Header() {
         <LogoText fill={theme === themes.dark ? 'white' : '#444444'} />
       </Link>
       <nav className={styles.header_nav}>
-        <CustomNavLink path='/' title='Marketplace' />
+        <CustomNavLink path='/browse' title='Marketplace' />
         <CustomNavLink path='/ranks' title='Rankings' />
         <CustomNavLink path='/connect' title='Connect a wallet' />
         <div className={styles.header_nav__button}>
@@ -84,7 +84,7 @@ function Header() {
           onClick={() => toggleOpen(!isOpen)}
           className={styles.header_sidebar__item}
         >
-          <CustomNavLink path='/' title='Marketplace' />
+          <CustomNavLink path='/browse' title='Marketplace' />
         </span>
         <span
           onClick={() => toggleOpen(!isOpen)}
