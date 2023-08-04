@@ -13,10 +13,10 @@ function BrowsePage() {
     <div className={styles.page}>
       <div className={styles.page_header}>
         <h1 className={styles.page_header__title}>
-          Top Creators
+          Browse Marketplace
         </h1>
         <p className={styles.page_header__subtitle}>
-          Check out top ranking NFT artists on the NFT Marketplace.
+          Browse through more than 50k NFTs on the NFT Marketplace.
         </p>
         <div className={styles.page_header__search}>
           <input

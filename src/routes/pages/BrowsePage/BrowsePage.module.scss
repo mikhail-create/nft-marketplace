@@ -33,7 +33,7 @@
         border: none;
         outline: none;
         color: var(--text-color);
-        width: 960px;
+        width: 90%;
       }
     }
   }
@@ -103,6 +103,12 @@
         line-height: 140%;
       }
     }
+
+    &_filter {
+      &__item {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -119,6 +125,16 @@
       &__subtitle {
         font-size: 16px;
         line-height: 140%;
+      }
+    }
+
+    &_filter {
+      &__item {
+        font-size: 16px;
+
+        > label {
+          display: none;
+        }
       }
     }
   }
