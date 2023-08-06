@@ -4,10 +4,10 @@ import { CollectionCardPropsType } from 'types/CollectionCardPropsType'
 
 import styles from './CollectionCard.module.scss'
 
-function CollectionCard({ images, amount, name, author }: CollectionCardPropsType) {
+function CollectionCard({ images, amount, name, author, isDarker }: CollectionCardPropsType) {
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${isDarker && styles.darker}`}>
       <div className={styles.card__img}>
         <img srcSet={images[0]} alt='Primary' />
       </div>

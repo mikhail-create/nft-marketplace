@@ -1,13 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import { motion } from 'framer-motion';
 import NFTContainer from 'components/NFTContainer/NFTContainer';
+import CollectionContainer from 'components/CollectionContainer/CollectionContainer';
 import Icons from 'shared/Icons'
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import { ThemeContextType } from 'types/ThemeContextType';
 
 import styles from './BrowsePage.module.scss'
 
+const spring = {
+  type: 'spring',
+  stiffness: 500,
+  damping: 50
+};
+
 function BrowsePage() {
   const { theme } = useContext<ThemeContextType>(ThemeContext);
+  const [isNftSelected, setIsNftSelected] = useState(true)
+
+  const toggleSwitch = () => setIsNftSelected(!isNftSelected);
 
   return (
     <div className={styles.page}>
@@ -31,7 +42,10 @@ function BrowsePage() {
       </div>
       <div className={styles.page__divider} />
       <div className={styles.page_filter}>
-        <div className={`${styles.page_filter__item} ${styles.active}`}>
+        <div
+          className={`${styles.page_filter__item} ${isNftSelected && styles.active}`}
+          onClick={toggleSwitch}
+        >
           <span>
             NFTs
           </span>
@@ -39,7 +53,10 @@ function BrowsePage() {
             302
           </label>
         </div>
-        <div className={styles.page_filter__item}>
+        <div
+          className={`${styles.page_filter__item} ${!isNftSelected && styles.active}`}
+          onClick={toggleSwitch}
+        >
           <span>
             Collections
           </span>
@@ -48,10 +65,19 @@ function BrowsePage() {
           </label>
         </div>
       </div>
-      <div className={styles.page_container}>
-        <NFTContainer />
+      <div className={styles.filter__switch} data-isnftselected={!isNftSelected} onClick={toggleSwitch}>
+        <motion.div className={styles.filter__handle} layout transition={spring} />
       </div>
-    </div>
+      <div className={styles.page_container}>
+        {
+          isNftSelected
+            ?
+            <NFTContainer />
+            :
+            <CollectionContainer />
+        }
+      </div>
+    </div >
   )
 }
 

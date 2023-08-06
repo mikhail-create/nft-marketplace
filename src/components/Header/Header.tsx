@@ -7,6 +7,7 @@ import { ReactComponent as BurgerMenu } from 'assets/icons/burger-menu.svg'
 import CustomNavLink from 'shared/CustomNavLink/CustomNavLink'
 import ButtonLink from 'shared/Button/ButtonLink';
 import Icons from 'shared/Icons'
+import ThemeToggle from 'shared/Theme/ThemeToggle';
 import { ThemeContext, themes } from 'shared/Theme/ThemeContext';
 import { ThemeContextType } from 'types/ThemeContextType';
 
@@ -44,6 +45,7 @@ function Header() {
         <LogoText fill={theme === themes.dark ? 'white' : '#444444'} />
       </Link>
       <nav className={styles.header_nav}>
+        <ThemeToggle />
         <CustomNavLink path='/browse' title='Marketplace' />
         <CustomNavLink path='/ranks' title='Rankings' />
         <CustomNavLink path='/connect' title='Connect a wallet' />
@@ -97,6 +99,12 @@ function Header() {
           className={styles.header_sidebar__item}
         >
           <CustomNavLink path='/connect' title='Connect a wallet' />
+        </span>
+        <span className={styles.header_sidebar__theme}>
+          <label>
+            UI Theme
+          </label>
+          <ThemeToggle />
         </span>
       </motion.nav>
     </header>

@@ -3,4 +3,5 @@ export interface CollectionCardPropsType {
   amount: number,
   name: string,
   author: string,
+  isDarker?: boolean
 }
