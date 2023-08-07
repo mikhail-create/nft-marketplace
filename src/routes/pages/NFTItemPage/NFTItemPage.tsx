@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import NFTCard from 'components/NFTCard/NFTCard'
 import Images from 'shared/Images'
 import Icons from 'shared/Icons'
 import { Button } from 'shared/Button/Button'
+import ButtonLink from 'shared/Button/ButtonLink'
 
 import styles from './NFTItemPage.module.scss'
 
@@ -82,9 +85,14 @@ function NFTItemPage() {
           <BlockLabel title='Created By' />
           <div className={styles.author}>
             <img srcSet={Images.AvatarPlaceholder} alt='Avatar' />
-            <span className={styles.author__name}>
+
+            <Link
+              to='/user'
+              className={styles.author__name}
+            >
               Orbitian
-            </span>
+            </Link>
+
           </div>
         </div>
         <div className={styles.item_body__description}>
@@ -128,6 +136,28 @@ function NFTItemPage() {
             <TagLabel title='illustration' />
             <TagLabel title='moon' />
           </div>
+        </div>
+      </div>
+      <div className={styles.item_more}>
+        <h2 className={styles.item_more__title}>
+          More from this artist
+        </h2>
+        <div className={styles.item_more__list}>
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+        </div>
+        <div className={styles.item_more__button}>
+          <ButtonLink
+            title='Go To Artist Page'
+            size='Medium'
+            isBordered={true}
+            icon={<Icons.ArrowRight fill='#A259FF' width={24} height={24} />}
+            to='/user'
+          />
         </div>
       </div>
     </div>

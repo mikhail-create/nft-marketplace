@@ -111,6 +111,11 @@
           font-size: 22px;
           font-weight: 600;
           line-height: 140%;
+
+          &:hover {
+            color: var(--primary-color);
+            transition: 500ms;
+          }
         }
       }
     }
@@ -132,6 +137,7 @@
 
         &:hover {
           color: var(--primary-color);
+          transition: 500ms;
         }
       }
     }
@@ -143,6 +149,37 @@
         align-items: center;
         gap: 20px;
       }
+    }
+  }
+
+  &_more {
+    padding: 80px 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+
+    &__title {
+      height: 60px;
+      font-family: "Work Sans";
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 120%;
+      text-transform: capitalize;
+    }
+
+    &__list {
+      display: flex;
+      gap: 60px 30px;
+      flex-wrap: wrap;
+    }
+
+    &__button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 80px 115px;
+      width: 268px;
     }
   }
 }
@@ -175,6 +212,19 @@
   .item {
     &__img {
       height: 420px;
+    }
+
+    &_more {
+      padding: 40px 72px;
+
+      &__title {
+        font-size: 28px;
+        line-height: 140%;
+      }
+
+      &__button {
+        margin: 40px 72px;
+      }
     }
 
     &_body {
@@ -226,6 +276,23 @@
   .item {
     &__img {
       height: 320px;
+    }
+
+    &_more {
+      padding: 40px 30px;
+      gap: 30px;
+
+      &__title {
+        height: 40px;
+        font-size: 28px;
+        line-height: 140%;
+      }
+
+      &__button {
+        position: relative;
+        margin: 0;
+        width: 100%;
+      }
     }
 
     &_body {
