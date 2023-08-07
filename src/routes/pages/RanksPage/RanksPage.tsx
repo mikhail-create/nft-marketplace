@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import RankCardSkeletion from 'components/RankCard/RankCardSkeletion';
 
@@ -7,6 +7,10 @@ import styles from './RanksPage.module.scss'
 const RankCard = lazy(() => import('../../../components/RankCard/RankCard'));
 
 function RanksPage() {
+  useEffect(() => {
+    document.title = 'Top Creators'
+  }, [])
+
   const isSmallScreen = useMediaQuery({ maxWidth: 835 });
 
   return (

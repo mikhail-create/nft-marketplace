@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CategoriesSection from 'components/sections/CategoriesSection/CategoriesSection'
 import CreatorSection from 'components/sections/CreatorSection/CreatorSection'
 import HeroSection from 'components/sections/HeroSection/HeroSection'
@@ -9,6 +9,10 @@ import HowItWorkSection from 'components/sections/HowItWorkSection/HowItWorkSect
 import SubscribeSection from 'components/sections/SubscribeSection/SubscribeSection'
 
 function HomePage() {
+  useEffect(() => {
+    document.title = 'NFT Marketplace'
+  }, [])
+
   return (
     <div>
       <HeroSection />

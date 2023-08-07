@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import NFTContainer from 'components/NFTContainer/NFTContainer';
 import CollectionContainer from 'components/CollectionContainer/CollectionContainer';
@@ -15,6 +15,10 @@ const spring = {
 };
 
 function BrowsePage() {
+  useEffect(() => {
+    document.title = 'Browse Marketplace'
+  }, [])
+
   const { theme } = useContext<ThemeContextType>(ThemeContext);
   const [isNftSelected, setIsNftSelected] = useState(true)
 

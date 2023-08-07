@@ -5,6 +5,12 @@
   background-color: var(--bg-color--secondary);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  transition: transform 500ms;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 
   &__img {
     width: 100%;

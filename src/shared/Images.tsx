@@ -10,6 +10,7 @@ import Categories7 from 'assets/images/categories/categories-7.webp';
 import NFT0 from 'assets/images/nft/NFT-0.webp'
 import NFT1 from 'assets/images/nft/NFT-1.webp'
 import NFT2 from 'assets/images/nft/NFT-2.webp'
+import NFTBIG from 'assets/images/nft/NFT-BIG.webp'
 import NFTHighlighted from 'assets/images/nft/NFT-highlighted.webp'
 
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
@@ -30,6 +31,7 @@ const Images = {
   NFT0,
   NFT1,
   NFT2,
+  NFTBIG,
   NFTHighlighted,
   AvatarPlaceholder,
   AvatarPlaceholderBig,

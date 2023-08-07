@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Images from 'shared/Images'
 
 import styles from './NFTCard.module.scss'
@@ -8,8 +9,15 @@ interface props {
 }
 
 function NFTCard({ isDarker }: props) {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => navigate('/item', { replace: true });
+
   return (
-    <div className={`${styles.card} ${isDarker && styles.darker}`}>
+    <div
+      className={`${styles.card} ${isDarker && styles.darker}`}
+      onClick={handleNavigate}
+    >
       <div className={styles.card__img}>
         <img srcSet={Images.NFT0} alt='NFT' />
       </div>

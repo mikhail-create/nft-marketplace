@@ -1,0 +1,273 @@
+.item {
+  &__img {
+    width: 100%;
+    height: 560px;
+  }
+
+  &_body {
+    padding: 40px 115px;
+    font-family: "Work Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+
+    > div {
+      max-width: 605px;
+    }
+
+    &__title {
+      font-size: 51px;
+      font-weight: 600;
+      line-height: 110%;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    &__date {
+      color: var(--text-color--secondary);
+      font-size: 22px;
+      line-height: 160%;
+      text-transform: capitalize;
+    }
+
+    &__timer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 40px 115px;
+      width: 295px;
+      height: 238px;
+      background-color: var(--bg-color--secondary);
+      border-radius: 20px;
+      padding: 30px;
+      font-family: "Space Mono";
+
+      > span {
+        width: 100%;
+        font-size: 12px;
+        line-height: 110%;
+        font-weight: 400;
+      }
+
+      .card_timer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &__row {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: center;
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 120%;
+          text-transform: capitalize;
+
+          > span {
+            width: 53px;
+          }
+
+          > span:nth-child(even) {
+            width: 18px;
+            line-height: 140%;
+            font-size: 28px;
+          }
+        }
+
+        &__values {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 38px;
+          font-size: 12px;
+          line-height: 110%;
+          font-weight: 400;
+          margin-bottom: 30px;
+
+          > span {
+            width: 53px;
+          }
+        }
+      }
+    }
+
+    &__author {
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        > img {
+          width: 24px;
+          height: 24px;
+          border-radius: 100%;
+        }
+
+        &__name {
+          display: inline-flex;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 140%;
+        }
+      }
+    }
+
+    &__description {
+      font-size: 22px;
+      line-height: 160%;
+    }
+
+    &__details {
+      font-size: 22px;
+      line-height: 160%;
+
+      .details__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 500ms;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    &__tags {
+      .tags__list {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.block__label {
+  display: block;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-color--secondary);
+  margin-bottom: 10px;
+}
+
+.tag__label {
+  display: block;
+  text-align: center;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: var(--bg-color--secondary);
+}
+
+@media screen and (min-width: 836px) and (max-width: 1279px) {
+  .block__label {
+    font-size: 16px;
+  }
+
+  .item {
+    &__img {
+      height: 420px;
+    }
+
+    &_body {
+      padding: 40px 72px;
+
+      > div {
+        max-width: 365px;
+      }
+
+      &__title {
+        font-size: 38px;
+        line-height: 120%;
+      }
+
+      &__timer {
+        margin: 40px 72px;
+      }
+
+      &__date,
+      &__description,
+      &__details {
+        font-size: 16px;
+        line-height: 140%;
+      }
+
+      &__author {
+        .author {
+          &__name {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__tags {
+        .tags__list {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .block__label {
+    font-size: 16px;
+  }
+
+  .item {
+    &__img {
+      height: 320px;
+    }
+
+    &_body {
+      padding: 40px 30px;
+      gap: 20px;
+
+      > div {
+        max-width: 100%;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 140%;
+      }
+
+      &__timer {
+        width: 100%;
+        margin: 0;
+        position: relative;
+      }
+
+      &__date,
+      &__description,
+      &__details {
+        font-size: 16px;
+        line-height: 140%;
+      }
+
+      &__author {
+        .author {
+          &__name {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__tags {
+        .tags__list {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    }
+  }
+}
