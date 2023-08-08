@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import RankCardSkeletion from 'components/RankCard/RankCardSkeletion';
+import RankCardList from 'components/RankCard/RankCardList';
 
 import styles from './RanksPage.module.scss'
 
@@ -57,16 +58,7 @@ function RanksPage() {
         </div>
         <ul>
           <Suspense fallback={<RankCardSkeletion />}>
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
-            <RankCard />
+            <RankCardList />
           </Suspense>
         </ul>
       </div>

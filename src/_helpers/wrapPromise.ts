@@ -20,6 +20,7 @@ const promiseWrapper = <T>(promise: Promise<T>) => {
       } else if (status === 'error') {
         throw response;
       } else {
+        console.log(response);
         return response;
       }
     },

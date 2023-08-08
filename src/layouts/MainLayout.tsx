@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -11,15 +11,17 @@ function MainLayout() {
   return (
     <div className={styles.layout}>
       <Header />
-      <Routes>
-        {routes.map(route => (
-          <Route
-            key={route.path}
-            path={route.path}
-            element={<route.component />} // Вызов компонента
-          />
-        ))}
-      </Routes>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Routes>
+          {routes.map(route => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<route.component />} // Вызов компонента
+            />
+          ))}
+        </Routes>
+      </Suspense>
       <Footer />
     </div>
   )

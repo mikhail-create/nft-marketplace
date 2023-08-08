@@ -1,28 +1,29 @@
 import React from 'react'
 import Images from 'shared/Images'
+import { RankCardProps } from 'types/RankCardProps.type'
 
 import styles from './RankCard.module.scss'
 
-function RankCard() {
+function RankCard({ rank, username, change, NFTSolds, volume }: RankCardProps) {
   return (
     <li className={styles.card}>
       <div className={styles.card__rank}>
-        1
+        {rank}
       </div>
       <div className={styles.card_artist}>
         <img srcSet={Images.AvatarPlaceholderBig} alt='Avatar' />
         <span className={styles.card_artist__name}>
-          Jaydon Ekstrom
+          {username}
         </span>
       </div>
       <div className={styles.card__change}>
-        +1.41%
+        {'+ ' + change + '%'}
       </div>
       <div className={styles.card__sales}>
-        602
+        {NFTSolds}
       </div>
       <div className={styles.card__volume}>
-        12.4 ETH
+        {volume + ' ETH'}
       </div>
     </li>
   )
