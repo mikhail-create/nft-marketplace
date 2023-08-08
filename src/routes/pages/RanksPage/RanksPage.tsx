@@ -1,13 +1,26 @@
-import React, { Suspense, lazy, useEffect } from 'react'
+import React, { Suspense, lazy, useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import RankCardSkeletion from 'components/RankCard/RankCardSkeletion';
-import RankCardList from 'components/RankCard/RankCardList';
 
 import styles from './RanksPage.module.scss'
 
-const RankCard = lazy(() => import('../../../components/RankCard/RankCard'));
+const RankCardList = lazy(() => import('../../../components/RankCard/RankCardList'));
+
+const spring = {
+  type: 'spring',
+  stiffness: 500,
+  damping: 50
+};
 
 function RanksPage() {
+
+  const [selectedDuration, setSelectedDuration] = useState('daily'); // Инициализируем начальное состояние
+
+  const handleDurationClick = (duration: string) => {
+    setSelectedDuration(duration); // Обновляем состояние при клике на элемент
+  };
+
   useEffect(() => {
     document.title = 'Top Creators'
   }, [])
@@ -25,16 +38,28 @@ function RanksPage() {
         </p>
       </div>
       <div className={styles.ranks_filter}>
-        <span className={`${styles.ranks_filter__item} ${styles.active}`}>
+        <span
+          className={`${styles.ranks_filter__item} ${selectedDuration === 'daily' && styles.active}`}
+          onClick={() => handleDurationClick('daily')}
+        >
           {isSmallScreen ? '1d' : 'Today'}
         </span>
-        <span className={styles.ranks_filter__item}>
+        <span
+          className={`${styles.ranks_filter__item} ${selectedDuration === 'weekly' && styles.active}`}
+          onClick={() => handleDurationClick('weekly')}
+        >
           {isSmallScreen ? '7d' : 'This Week'}
         </span>
-        <span className={styles.ranks_filter__item}>
+        <span
+          className={`${styles.ranks_filter__item} ${selectedDuration === 'monthly' && styles.active}`}
+          onClick={() => handleDurationClick('monthly')}
+        >
           {isSmallScreen ? '30d' : 'This Month'}
         </span>
-        <span className={styles.ranks_filter__item}>
+        <span
+          className={`${styles.ranks_filter__item} ${selectedDuration === 'all' && styles.active}`}
+          onClick={() => handleDurationClick('all')}
+        >
           All Time
         </span>
       </div>
@@ -58,7 +83,7 @@ function RanksPage() {
         </div>
         <ul>
           <Suspense fallback={<RankCardSkeletion />}>
-            <RankCardList />
+            <RankCardList sortDuration={selectedDuration} />
           </Suspense>
         </ul>
       </div>

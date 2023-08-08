@@ -42,7 +42,6 @@
   }
 
   &__change {
-    color: var(--success-color);
     width: 160px;
     margin-right: 20px;
   }
@@ -55,6 +54,14 @@
   &__volume {
     width: 160px;
   }
+}
+
+.goodChange {
+  color: var(--success-color);
+}
+
+.badChange {
+  color: var(--error-color);
 }
 
 @media screen and (min-width: 836px) and (max-width: 1279px) {

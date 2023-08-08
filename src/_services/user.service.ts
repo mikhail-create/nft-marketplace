@@ -6,8 +6,6 @@ export function getUsers() {
 
   const promise = axios.get(url).then(({ data }) => data);
 
-  console.log(promise);
-
   return wrapPromise(promise);
 }
 
