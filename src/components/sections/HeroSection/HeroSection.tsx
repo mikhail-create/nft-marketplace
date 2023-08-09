@@ -46,15 +46,21 @@ function HeroSection() {
         </div>
       </div>
       <div className={styles.hero_preview}>
-        <div className={styles.hero_preview__image}>
-          <img srcSet={ImagePlaceholder} alt='Placeholder' />
-        </div>
+        <img
+          className={styles.hero_preview__img}
+          srcSet={ImagePlaceholder}
+          alt='NFT Placeholder'
+        />
         <div className={styles.hero_preview__info}>
-          <span>
+          <span className={styles.nft__name}>
             Space Walking
           </span>
-          <span>
-            <img srcSet={AvatarPlaceholder} alt='Avatar Placeholder' />
+          <span className={styles.nft_author}>
+            <img
+              srcSet={AvatarPlaceholder}
+              alt='Avatar Placeholder'
+              className={styles.nft_author__img}
+            />
             Animakid
           </span>
         </div>

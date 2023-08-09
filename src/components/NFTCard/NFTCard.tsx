@@ -27,7 +27,11 @@ function NFTCard({ isDarker }: props) {
             Distant Galaxy
           </span>
           <span className={styles.card_title__author}>
-            <img srcSet={Images.AvatarPlaceholder} alt='Avatar' />
+            <img
+              srcSet={Images.AvatarPlaceholder}
+              className={styles.author__img}
+              alt='Avatar'
+            />
             MoonDancer
           </span>
         </div>

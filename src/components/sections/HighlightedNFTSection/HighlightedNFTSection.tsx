@@ -14,7 +14,14 @@ function HighlightedNFTSection() {
       <div className={styles.highlighted__wrapper}></div>
       <div className={styles.highlighted_card}>
         <div className={styles.highlighted_card__info}>
-          <span className={styles.card__author}><img srcSet={Images.AvatarPlaceholder} alt='Avatar' />Shroomie</span>
+          <span className={styles.card__author}>
+            <img
+              srcSet={Images.AvatarPlaceholder}
+              alt='Avatar'
+              className={styles.author__img}
+            />
+            Shroomie
+          </span>
           <span className={styles.card__title}>Magic Mashrooms</span>
           <div className={styles.card__button}>
             <Button

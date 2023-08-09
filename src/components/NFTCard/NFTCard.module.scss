@@ -35,21 +35,26 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    line-height: 140%;
 
     &__name {
       font-family: "Work Sans";
       font-size: 22px;
-      line-height: 140%;
       font-weight: 600;
     }
 
     &__author {
       font-family: "Space Mono";
-      line-height: 140%;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 12px;
+
+      .author__img {
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+      }
     }
   }
 
