@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { getUsers } from '_services/user.service'
 import { RankCardProps } from 'types/RankCardProps.type'
 
@@ -7,7 +7,7 @@ import RankCard from './RankCard'
 const fetchData = getUsers()
 
 function RankCardList({ sortDuration }: { sortDuration: string }) {
-  const usersList = fetchData.read()
+  const usersList = useMemo(() => fetchData.read(), [])
 
   const getSortedUsersList = () => {
     return [...usersList].sort((a, b) => {
@@ -21,7 +21,7 @@ function RankCardList({ sortDuration }: { sortDuration: string }) {
       case 'monthly':
         return a.rankMonthly - b.rankMonthly;
       default:
-        return 0; // Возвращаем 0 в случае неопределенного условия (это можно настроить по вашему усмотрению)
+        return 0; // Возвращаем 0 в случае неопределенного условия
       }
     });
   };

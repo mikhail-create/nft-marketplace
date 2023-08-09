@@ -3,9 +3,9 @@ import axios from 'axios';
 
 export function getUsers() {
   const url = 'https://nft-marketplace-server.vercel.app/user'
-
   const promise = axios.get(url).then(({ data }) => data);
-
+  console.log(promise);
+  
   return wrapPromise(promise);
 }
 

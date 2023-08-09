@@ -13,6 +13,21 @@ const spring = {
   damping: 50
 };
 
+const variants = {
+  daily: {
+    marginLeft: 0
+  },
+  weekly: {
+    marginLeft: '25%'
+  },
+  monthly: {
+    marginLeft: '50%'
+  },
+  all: {
+    marginLeft: '75%'
+  }
+}
+
 function RanksPage() {
 
   const [selectedDuration, setSelectedDuration] = useState('daily'); // Инициализируем начальное состояние
@@ -62,6 +77,19 @@ function RanksPage() {
         >
           All Time
         </span>
+      </div>
+      <div className={styles.ranks_switch}>
+        <motion.div
+          className={styles.ranks_switch__handle}
+          transition={spring}
+          animate={
+            selectedDuration === 'all' ? 'all' :
+              selectedDuration === 'daily' ? 'daily' :
+                selectedDuration === 'weekly' ? 'weekly' : 'monthly'
+          }
+          variants={variants}>
+          
+        </motion.div>
       </div>
       <div className={styles.ranks_list}>
         <div className={styles.ranks_list__header}>
