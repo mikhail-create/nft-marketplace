@@ -6,6 +6,7 @@ import ConnectPage from './pages/ConnectPage/ConnectPage';
 import RanksPage from './pages/RanksPage/RanksPage';
 import BrowsePage from './pages/BrowsePage/BrowsePage';
 import NFTItemPage from './pages/NFTItemPage/NFTItemPage';
+import UserPage from './pages/UserPage/UserPage';
 
 interface Route {
   path: string;
@@ -40,6 +41,14 @@ const routes: Route[] = [
   {
     path: 'item/:id',
     component: NFTItemPage
+  },
+  {
+    path: 'user',
+    component: UserPage
+  },
+  {
+    path: 'user/:id',
+    component: UserPage
   }
 ];
 

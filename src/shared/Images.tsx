@@ -14,7 +14,7 @@ import NFTBIG from 'assets/images/nft/NFT-BIG.webp'
 import NFTHighlighted from 'assets/images/nft/NFT-highlighted.webp'
 
 import AvatarPlaceholder from 'assets/images/avatar-placeholder.webp'
-import AvatarPlaceholderBig from 'assets/images/avatar-placeholder-big.webp'
+import ProfileBanner from 'assets/images/profile-banner.webp'
 import SignUpPlaceholder from 'assets/images/signup-placeholder.webp'
 import ConnectPlaceholder from 'assets/images/connect-placeholder.webp'
 import Newsletter from 'assets/images/newsletter.webp'
@@ -34,7 +34,7 @@ const Images = {
   NFTBIG,
   NFTHighlighted,
   AvatarPlaceholder,
-  AvatarPlaceholderBig,
+  ProfileBanner,
   SignUpPlaceholder,
   ConnectPlaceholder,
   Newsletter

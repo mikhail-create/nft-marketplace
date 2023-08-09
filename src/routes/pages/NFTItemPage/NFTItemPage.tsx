@@ -5,16 +5,9 @@ import Images from 'shared/Images'
 import Icons from 'shared/Icons'
 import { Button } from 'shared/Button/Button'
 import ButtonLink from 'shared/Button/ButtonLink'
+import CustomLabel from 'shared/CustomLabel/CustomLabel'
 
 import styles from './NFTItemPage.module.scss'
-
-const BlockLabel = ({ title }: { title: string }) => {
-  return (
-    <label className={styles.block__label}>
-      {title}
-    </label>
-  )
-}
 
 const TagLabel = ({ title }: { title: string }) => {
   return (
@@ -82,7 +75,7 @@ function NFTItemPage() {
           </div>
         </div>
         <div className={styles.item_body__author}>
-          <BlockLabel title='Created By' />
+          <CustomLabel title='Created By' />
           <div className={styles.author}>
             <img srcSet={Images.AvatarPlaceholder} alt='Avatar' />
 
@@ -96,7 +89,7 @@ function NFTItemPage() {
           </div>
         </div>
         <div className={styles.item_body__description}>
-          <BlockLabel title='Description' />
+          <CustomLabel title='Description' />
           <p>
             The Orbitians
             <br />
@@ -115,7 +108,7 @@ function NFTItemPage() {
           </p>
         </div>
         <div className={styles.item_body__details}>
-          <BlockLabel title='Details' />
+          <CustomLabel title='Details' />
           <span className={styles.details__item}>
             <Icons.Globe fill='#858584' />
             <a href='/'>
@@ -130,7 +123,7 @@ function NFTItemPage() {
           </span>
         </div>
         <div className={styles.item_body__tags}>
-          <BlockLabel title='Tags' />
+          <CustomLabel title='Tags' />
           <div className={styles.tags__list}>
             <TagLabel title='Animation' />
             <TagLabel title='illustration' />
